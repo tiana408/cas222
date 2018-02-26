@@ -1,6 +1,7 @@
 <?php
 
-$conn=mysqli_connect("localhost", "root", "", "tianaweb_registration");
+
+$conn=mysqli_connect("localhost", "root", "", "tianaweb_regi");
 
 ?>
 
@@ -71,12 +72,12 @@ $conn=mysqli_connect("localhost", "root", "", "tianaweb_registration");
               
                  <tr>
                 <td>Phone</td>  
-                 <td><input name="tel" type="tel" placeholder="Phone Number" required=""></td>  
+                 <td><input name="phone_number" type="tel" placeholder="Phone Number" required=""></td>  
               </tr>
               
               <tr>
                 <td>Event(s)<br> Registering<br>For</td>  
-                  <td><select name="event" required="">
+                  <td><select name="events" required="">
                       <option value="choose">Choose Event</option>
                        <option value="long course">Long Course</option>
                        <option value="olympic">Olympic</option>
@@ -89,13 +90,13 @@ $conn=mysqli_connect("localhost", "root", "", "tianaweb_registration");
               
                <tr>
                 <td>Emergency Contact <br> and Phone Number</td>
-                <td><input name="contact" type="text" placeholder="Name" required=""></td>   
-                 <td><input name="contactnum" type="tel" placeholder="Phone Number" required=""></td>  
+                <td><input name="contact_name" type="text" placeholder="Name" required=""></td>   
+                 <td><input name="contact_number" type="tel" placeholder="Phone Number" required=""></td>  
               </tr>
               
                <tr>
                 <td>T-Shirt Size<br>(XS-XXXXL)</td>  
-                 <td><input name="shirt" type="text" placeholder="T-Shirt Size" required=""></td>  
+                 <td><input name="tshirt_size" type="text" placeholder="T-Shirt Size" required=""></td>  
               </tr>
               
                <tr>
@@ -123,14 +124,15 @@ $conn=mysqli_connect("localhost", "root", "", "tianaweb_registration");
     if(isset($_POST['submit'])) {
         $name= $_POST['name'];
         $email= $_POST['email'];
-        $tel= $_POST['tel'];
-        $event= $_POST['event'];
-        $contact= $_POST['contact'];
-        $contactnum= $_POST['contactnum'];
-        $shirt= $_POST['shirt'];
+        $phone_number= $_POST['phone_number'];
+        $events= $_POST['events'];
+        $contact_name= $_POST['contact_name'];
+        $contact_number= $_POST['contact_number'];
+        $tshirt_size= $_POST['tshirt_size'];
         $gender= $_POST['gender'];
         
-      $query="insert into registration(name, email, tel, event, contact, contactnum, shirt, gender)values('$name','$email','tel','$event','$contact','$contactnum','$shirt','$gender')";
+      $query="insert into tianaweb_reg(name, email, phone_number, events, contact_name, contact_number, tshirt_size, gender)values('$name','$email','$phone_number','$events','$contact_name','$contact_number','$tshirt_size','$gender')";
+        
         $run=mysqli_query($conn,$query);
         
         if($run){
