@@ -4,7 +4,7 @@
 
 
 
-$conn=mysqli_connect("localhost", "root", "", "tianaweb_registration");
+$conn=mysqli_connect("localhost", "tianaweb_tiana", "itsoundsbad123", "tianaweb_registration");
 
 
     if(isset($_POST['submit'])) {
