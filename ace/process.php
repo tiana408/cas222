@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 
          
      $sql ="
-  INSERT INTO `tianaweb_registration`.`form`  ('name', 'email' , 'phone_number' , 'event' , 'contact_name' , 'contact_number' , 'tshirt_size' , 'gender') VALUES (NULL '$name','$email','$phone_number','$event','$contact_name','$contact_number','$tshirt_size','$gender' ";
+  INSERT INTO `tianaweb_registration`.`form`  ('name', 'email' , 'phone_number' , 'event' , 'contact_name' , 'contact_number' , 'tshirt_size' , 'gender') VALUES (NULL '$name','$email','$phone_number','$event','$contact_name','$contact_number','$tshirt_size','$gender') ";
         
    if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
