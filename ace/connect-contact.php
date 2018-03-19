@@ -1,4 +1,13 @@
-<?php
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ace in the Hole - Contact</title>
+    <link href="css/contact.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+   <?php
     
 $servername = "localhost";
 $username = "tianaweb_tiana";
@@ -21,7 +30,10 @@ if ($conn->connect_error) {
      INSERT INTO contact  (name, email, comment) VALUES ('$users_name', '$users_email', '$users_comment')";
         
    if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+     echo "New record created successfully <br><br>";
+    echo "Click ";
+    echo "<a href='contact.html'>Here</a>";
+    echo "To Go Back";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -29,4 +41,5 @@ if ($conn->connect_error) {
 $conn->close();
 
 ?>
-
+    </body>
+</html>
