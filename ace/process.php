@@ -1,4 +1,13 @@
-<?php
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ace in the Hole - Registration</title>
+    <link href="css/registration.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+   <?php
     
 $servername = "localhost";
 $username = "tianaweb_tiana";
@@ -6,6 +15,7 @@ $password = "ilikethesun123";
 $dbname = "tianaweb_registration";
 $users_name = $_POST['name'];
 $users_email = $_POST['email'];
+$users_day = $_POST['day'];
 $users_phone_number = $_POST['phone_number'];
 $users_event = $_POST['event'];
 $users_contact_name = $_POST['contact_name'];
@@ -22,10 +32,13 @@ if ($conn->connect_error) {
 }
      
      $sql ="
-     INSERT INTO form  (name, email, phone_number, event, contact_name, contact_number, tshirt_size, gender) VALUES ('$users_name', '$users_email', '$users_phone_number', '$users_event', '$users_contact_name', '$users_contact_number', '$users_tshirt_size', '$users_gender')";
+     INSERT INTO form  (name, email, day, phone_number, event, contact_name, contact_number, tshirt_size, gender) VALUES ('$users_name', '$users_email', '$users_day', '$users_phone_number', '$users_event', '$users_contact_name', '$users_contact_number', '$users_tshirt_size', '$users_gender')";
         
    if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "New record created successfully <br><br>";
+    echo "Click ";
+    echo "<a href='registration.html'>Here</a>";
+    echo "To Go Back";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -33,4 +46,5 @@ if ($conn->connect_error) {
 $conn->close();
 
 ?>
-
+</body>
+</html
