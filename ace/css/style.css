@@ -7,6 +7,7 @@
         font-family: sans-serif;
         text-align: center;
     }
+  
    
     .slideshow-container {
         display: none;
@@ -119,14 +120,7 @@
         height: 100%;
         ;
     }
-    .newsletter {
-        background: black;
-        color: #b81212;
-    }
-    .newsletter tr td {
-        font-size: 20px;
-        font-weight: bold;
-    }
+  
     .left {
         text-align: left;
     }
@@ -175,9 +169,6 @@
         background-color: black;
     }
     
-    .newsletter .form-row {
-        padding: 5%;
-    }
     
     .article-contact{
         margin-top: -5%;
@@ -379,22 +370,7 @@
         padding: 5%;
         background-color: black;
     }
-    .newsletter {
-        background: #b81212;
-        color: black;
-        height: 400px;
-        margin-top: -5%;
-    }
-    .newsletter h3 {
-        text-align: center;
-    }
-    .newsletter tr td {
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .newsletter .form-row {
-        padding: 5%;
-    }
+ 
     #content {
         display: inline-block;
         padding-top: 121px;
@@ -481,14 +457,7 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
         display: block;
         background-color: black;
     }
-    .newsletter {
-        height: 170px;
-        
-    }
-    .newsletter .form-row {
-        padding: 5%;
-        
-    }
+
     article:nth-child(odd) {
         background-color: #b81212;
         padding: 15%;
