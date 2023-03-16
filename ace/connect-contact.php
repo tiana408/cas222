@@ -11,7 +11,7 @@
     
 $servername = "localhost";
 $username = "tianaweb_tiana";
-$password = "ilikethesun123";
+$password = "xx";
 $dbname = "tianaweb_registration";
 $users_name = $_POST['name'];
 $users_email = $_POST['email'];
